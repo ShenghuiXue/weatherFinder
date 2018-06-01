@@ -13,7 +13,7 @@ app.get('/test', function(req, res) {
 }) 
 
 app.get('/*', function(req, res) {
-	res.send("you hit other route");
+	res.sendFile(__dirname +'/build/index.html');
 }) 
 
 //app.listen(9000);
