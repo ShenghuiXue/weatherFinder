@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('./build'));
 
 app.get('/', function (req, res) {
-  res.sendFile('./build/index.html');
+  res.sendFile(__dirname +'/build/index.html');
 });
 
 app.get('/test', function(req, res) {
