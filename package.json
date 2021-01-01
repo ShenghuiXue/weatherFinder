@@ -10,6 +10,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "axios": "^0.21.1",
     "start": "node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
