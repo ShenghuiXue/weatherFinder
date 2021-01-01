@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import Titles from './components/Titles';
 import Form from "./components/Form";
@@ -47,7 +48,15 @@ class App extends React.Component {
 			});
 		}
 		
+		this.postUsage("Fetch_Weather");
 	}
+	
+	postUsage =  (methodName, serviceName="Weather_Finder", label="") => {
+		const baseUrl = "https://usage-checker.herokuapp.com/stats";
+		const requestBody = {methodName, serviceName, label};
+		axios.post(baseUrl, requestBody).then(res => {console.log(res.data);});
+	}
+	
 	render () {
 		return (
 			<div>
